@@ -1,0 +1,25 @@
+{
+  "name": "Clover Download List Generator",
+  "description": "Generate Clover Download List",
+  "version": "1.0",
+  "manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"host_permissions": [
+		"https://qsx.app/",
+		"<all_urls>"
+	],
+  "permissions": ["scripting", "notifications", "cookies", "storage", "downloads", "activeTab", "scripting", "tabs"],
+	"action": {
+		"default_popup": "popup.html"
+	},
+
+	"commands": {
+		"addToList": {
+		  "suggested_key": "Ctrl+Shift+Z",
+		  "description": "Add to list"
+		}	
+	}
+
+}
